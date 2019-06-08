@@ -9,12 +9,11 @@
 
 Demo: [resolver](https://maps.artsdatabanken.no)
 
-resolver maps from a url to a different url.
+A resolver to map url from one scheme to another.
 
 Example:
 
-From: <https://artsdatabanken.no/Taxon/Canis%20lupus/48025>
-To: <https://www.gbif.org/occurrence/map?q=Canis%20Lupus>
+- <https://artsdatabanken.no/Taxon/Canis%20lupus/48025> => <https://www.gbif.org/occurrence/map?q=Canis%20Lupus>
 
 ## Features
 
