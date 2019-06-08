@@ -26,6 +26,7 @@ const metaPath = path.join(
   "metadata_med_undertyper.json"
 );
 config.map = readMetadata(metaPath);
+
 app.use(function(req, res, next) {
   res.header("X-Powered-By", "resolver v" + pjson.version);
   res.header("Access-Control-Allow-Origin", "*");

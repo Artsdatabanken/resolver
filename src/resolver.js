@@ -8,7 +8,7 @@ async function get(urlpath, query, config) {
     segments.shift(); // leading slash
     const targetDomain = segments.shift();
     const source = parse(query);
-    const resource = convert(source);
+    const resource = convert(source, config);
     const targetUrl = target.parse(targetDomain, resource);
     return resolve(
       targetDomain + ": " + JSON.stringify(resource) + " // " + targetUrl

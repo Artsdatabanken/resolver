@@ -3,11 +3,11 @@ const fs = require("fs");
 function read(metadatapath) {
   const raw = fs.readFileSync(metadatapath);
   const json = JSON.parse(raw);
-  const r = { semantiskTilKode: {}, kodeTilSemantisk: {} };
+  const r = { semantiskUrlTilKode: {}, kodeTilSemantiskUrl: {} };
   Object.keys(json).forEach(kode => {
     const meta = json[kode];
-    r.semantiskTilKode[meta.url] = meta.kode;
-    r.kodeTilSemantisk[meta.kode] = meta.url;
+    r.semantiskUrlTilKode[meta.url] = meta.kode;
+    r.kodeTilSemantiskUrl[meta.kode] = meta.url;
   });
   return r;
 }

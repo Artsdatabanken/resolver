@@ -1,5 +1,5 @@
 function parse(url) {
-  return { semantic: url.pathname };
+  return { semantic: url.pathname.substring(1) };
 }
 
 const parser = {
