@@ -1,3 +1,4 @@
+const readMetadata = require("./metadata");
 const express = require("express");
 const log = require("log-less-fancy")();
 const minimist = require("minimist");
@@ -20,7 +21,11 @@ if (argv._.length !== 1) {
 const app = express();
 const config = { dataDirectory: path.resolve(argv._[0]) };
 config.json = require(path.join(config.dataDirectory, "config"));
-
+const metaPath = path.join(
+  config.dataDirectory,
+  "metadata_med_undertyper.json"
+);
+config.map = readMetadata(metaPath);
 app.use(function(req, res, next) {
   res.header("X-Powered-By", "resolver v" + pjson.version);
   res.header("Access-Control-Allow-Origin", "*");
