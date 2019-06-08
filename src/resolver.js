@@ -10,9 +10,7 @@ async function get(urlpath, query, config) {
     const source = parse(query);
     const resource = convert(source, config);
     const targetUrl = target.parse(targetDomain, resource);
-    return resolve(
-      targetDomain + ": " + JSON.stringify(resource) + " // " + targetUrl
-    );
+    return resolve(targetUrl);
   });
 }
 

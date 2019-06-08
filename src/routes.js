@@ -12,7 +12,7 @@ module.exports = function(app, config) {
         console.log(node);
         if (!node) return next();
         //        res.setHeader("Content-Type", node.contentType);
-        res.send(node);
+        res.redirect(node);
       })
       .catch(err => {
         next(err);

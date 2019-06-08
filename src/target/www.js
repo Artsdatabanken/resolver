@@ -15,12 +15,14 @@ function makeUrl(query) {
     prefix = parts.shift();
   }
   switch (prefix) {
+    case "AR":
+      return "https://artsdatabanken.no/Taxon/x/" + parts[0];
     case "LA":
       return "https://artsdatabanken.no/nin/LA/" + parts.join("/");
     case "NA":
-      return "nanana: " + parts;
+      return null;
   }
-  return "www:" + JSON.stringify(parts);
+  return null;
 }
 
 module.exports = makeUrl;
