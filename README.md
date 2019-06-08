@@ -7,8 +7,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-[![Screenshot](doc/screenshot.png "ratatouille screenshot")](https://maps.artsdatabanken.no)
-
 Demo: [resolver](https://maps.artsdatabanken.no)
 
 resolver maps from a url to a different url.
